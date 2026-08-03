@@ -1988,11 +1988,13 @@ ul {
         width: calc(100vw - 32px);
         left: 16px;
         right: auto;
-        top: 16px;
+        top: -150px;
+        transition: top var(--transition-normal) cubic-bezier(0.68, -0.55, 0.27, 1.55);
     }
 
     .toast.show {
         right: auto;
         left: 16px;
+        top: 16px;
     }
 }
