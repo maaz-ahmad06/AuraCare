@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraCare | Premium Modern Medical Clinic</title>
+    <meta name="description" content="AuraCare is a premium, fully responsive medical clinic website created using HTML, CSS, and JS. It includes a custom animated preloader, scroll entry animations, glassmorphic navbar, animated stats counters, a testimonial carousel, and a secure booking form with real-time validation and feedback toasts. 100% responsive, fully optimized, and fast!!!">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================================= PRELOADER ================================= -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="pulse-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <div class="pulse-ring"></div>
+            <h2 class="loader-logo">Aura<span>Care</span></h2>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================= HEADER / NAVBAR ================================= -->
+    <header class="main-header" id="header">
+        <div class="container navbar-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <i class="fa-solid fa-house-chimney-medical"></i> Aura<span>Care</span>
+            </a>
+            
+            <nav class="desktop-nav" id="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#appointment" class="btn btn-primary btn-navbar">Book Appointment</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================= MOBILE NAVIGATION DRAWER ================================= -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-house-chimney-medical"></i> Aura<span>Care</span>
+            </a>
+            <button class="drawer-close" id="drawer-close" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="#home" class="drawer-link">Home</a></li>
+            <li><a href="#about" class="drawer-link">About</a></li>
+            <li><a href="#services" class="drawer-link">Services</a></li>
+            <li><a href="#doctors" class="drawer-link">Doctors</a></li>
+            <li><a href="#testimonials" class="drawer-link">Reviews</a></li>
+            <li><a href="#contact" class="drawer-link">Contact</a></li>
+            <li><a href="#appointment" class="drawer-link btn btn-primary">Book Appointment</a></li>
+        </ul>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- ================================= HERO SECTION ================================= -->
+    <section class="hero-section" id="home">
+        <div class="container hero-container">
+            <div class="hero-content fade-in-element">
+                <div class="badge">
+                    <span class="badge-icon"><i class="fa-solid fa-star"></i></span>
+                    <span class="badge-text">Top-Rated Care Clinic</span>
+                </div>
+                <h1 class="hero-title">Your Health is Our <span>Lifelong</span> Commitment</h1>
+                <p class="hero-desc">
+                    Experience advanced, compassionate medical care at AuraCare. Our expert doctors use state-of-the-art technology to provide top-tier diagnostics, treatments, and family healthcare.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#appointment" class="btn btn-primary">Book An Appointment <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-avatars">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=150" alt="Doctor 1" class="avatar-img">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=150" alt="Doctor 2" class="avatar-img">
+                        <img src="https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=150" alt="Doctor 3" class="avatar-img">
+                    </div>
+                    <div class="trust-text">
+                        <h4>50+ Specialized Doctors</h4>
+                        <p>Trusted by over 15,000+ happy patients globally.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-media fade-in-element">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000" alt="Doctors Team Consulting" class="hero-main-img">
+                    <!-- Floating Card 1 -->
+                    <div class="floating-card card-experience">
+                        <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="card-info">
+                            <h4>12+ Years</h4>
+                            <p>Proven Excellence</p>
+                        </div>
+                    </div>
+                    <!-- Floating Card 2 -->
+                    <div class="floating-card card-support">
+                        <div class="card-icon-pulse"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div class="card-info">
+                            <h4>24/7 Support</h4>
+                            <p>Emergency Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================= STATS BAR ================================= -->
+    <section class="stats-section">
+        <div class="container stats-container">
+            <div class="stat-item">
+                <div class="stat-number-wrapper">
+                    <h3 class="stat-number" data-target="15">0</h3>
+                    <span class="stat-suffix">k+</span>
+                </div>
+                <p class="stat-label">Happy Patients</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number-wrapper">
+                    <h3 class="stat-number" data-target="99">0</h3>
+                    <span class="stat-suffix">%</span>
+                </div>
+                <p class="stat-label">Success Rate</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number-wrapper">
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <span class="stat-suffix">+</span>
+                </div>
+                <p class="stat-label">Specialist Doctors</p>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number-wrapper">
+                    <h3 class="stat-number" data-target="12">0</h3>
+                    <span class="stat-suffix">+</span>
+                </div>
+                <p class="stat-label">Years of Service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================= ABOUT SECTION ================================= -->
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-media fade-in-element">
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" alt="Modern Medical Office" class="about-img-main">
+                    <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&q=80&w=600" alt="Doctor Consultation" class="about-img-sub">
+                </div>
+            </div>
+            
+            <div class="about-content fade-in-element">
+                <div class="section-tag">About AuraCare</div>
+                <h2 class="section-title">Bringing Global Quality Healthcare Close to You</h2>
+                <p class="section-desc">
+                    At AuraCare, we believe in providing highly personalized and comprehensive clinical care. Our facilities are designed to create a warm and comforting environment while hosting the most advanced diagnostic and treatment tools available in modern medicine.
+                </p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div class="feature-text">
+                            <h3>Board Certified Doctors</h3>
+                            <p>Our specialists are recruited from top international hospitals and institutes.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fa-solid fa-microscope"></i></div>
+                        <div class="feature-text">
+                            <h3>Advanced Laboratory</h3>
+                            <p>Accurate diagnostic screenings and rapid test result cycles for patients.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                        <div class="feature-text">
+                            <h3>24/7 Immediate Response</h3>
+                            <p>Emergency medical support, intensive care, and mobile clinic networks.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#appointment" class="btn btn-primary">Book First Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================= SERVICES SECTION ================================= -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header fade-in-element">
+                <div class="section-tag text-center">Our Departments</div>
+                <h2 class="section-title text-center">Comprehensive Care Services</h2>
+                <p class="section-desc text-center">
+                    We offer specialized clinical care across multiple medical categories, ensuring all your health needs are covered in one place.
+                </p>
+            </div>
+            
+            <div class="services-grid fade-in-element">
+                <!-- Cardiology -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Cardiology</h3>
+                    <p>Expert evaluation and comprehensive management of heart health, blood pressure, and cardiovascular conditions.</p>
+                    <a href="#appointment" class="service-link">Consult Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <!-- Pediatrics -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
+                    <h3>Pediatrics</h3>
+                    <p>Gentle and compassionate healthcare services, immunization, and growth monitoring for infants and children.</p>
+                    <a href="#appointment" class="service-link">Consult Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <!-- Neurology -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Neurology</h3>
+                    <p>Advanced diagnostic procedures and specialized treatment protocols for brain, spine, and neurological disorders.</p>
+                    <a href="#appointment" class="service-link">Consult Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <!-- Orthopedics -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bone"></i></div>
+                    <h3>Orthopedics</h3>
+                    <p>Surgical and non-surgical restoration of musculoskeletal structures, joint replacement, and sports physical therapy.</p>
+                    <a href="#appointment" class="service-link">Consult Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <!-- Dental Care -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h3>Dental Care</h3>
+                    <p>Preventative cleanings, pediatric dentistry, orthodontics, cosmetic correction, and modern oral surgery.</p>
+                    <a href="#appointment" class="service-link">Consult Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <!-- General Medicine -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>General Medicine</h3>
+                    <p>Routine physical checkups, primary care diagnostics, vaccinations, and long-term health management strategies.</p>
+                    <a href="#appointment" class="service-link">Consult Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================= DOCTORS SECTION ================================= -->
+    <section class="doctors-section" id="doctors">
+        <div class="container">
+            <div class="section-header fade-in-element">
+                <div class="section-tag text-center">Specialist Team</div>
+                <h2 class="section-title text-center">Meet Our Medical Experts</h2>
+                <p class="section-desc text-center">
+                    Our team of experienced and highly trained specialists are dedicated to providing the highest standards of clinical excellence.
+                </p>
+            </div>
+            
+            <div class="doctors-grid fade-in-element">
+                <!-- Doctor 1 -->
+                <div class="doctor-card">
+                    <div class="doctor-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600" alt="Dr. Sophia Martinez" class="doctor-img">
+                        <div class="doctor-socials">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <span class="doctor-specialty">Cardiologist</span>
+                        <h3>Dr. Sophia Martinez</h3>
+                        <div class="doctor-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <a href="#appointment" class="btn btn-outline btn-sm">Book Consultation</a>
+                    </div>
+                </div>
+                <!-- Doctor 2 -->
+                <div class="doctor-card">
+                    <div class="doctor-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600" alt="Dr. Alexander Wright" class="doctor-img">
+                        <div class="doctor-socials">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <span class="doctor-specialty">Neurologist</span>
+                        <h3>Dr. Alexander Wright</h3>
+                        <div class="doctor-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <a href="#appointment" class="btn btn-outline btn-sm">Book Consultation</a>
+                    </div>
+                </div>
+                <!-- Doctor 3 -->
+                <div class="doctor-card">
+                    <div class="doctor-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=600" alt="Dr. Emily Chen" class="doctor-img">
+                        <div class="doctor-socials">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <span class="doctor-specialty">Pediatrician</span>
+                        <h3>Dr. Emily Chen</h3>
+                        <div class="doctor-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <a href="#appointment" class="btn btn-outline btn-sm">Book Consultation</a>
+                    </div>
+                </div>
+                <!-- Doctor 4 -->
+                <div class="doctor-card">
+                    <div class="doctor-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&q=80&w=600" alt="Dr. Marcus Vance" class="doctor-img">
+                        <div class="doctor-socials">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <span class="doctor-specialty">Orthopedic Surgeon</span>
+                        <h3>Dr. Marcus Vance</h3>
+                        <div class="doctor-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <a href="#appointment" class="btn btn-outline btn-sm">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================= TESTIMONIALS SECTION ================================= -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in-element">
+                <div class="section-tag text-center">Patient Stories</div>
+                <h2 class="section-title text-center">What Our Patients Say</h2>
+                <p class="section-desc text-center">
+                    Read genuine testimonials and success stories from the patients who have experienced our professional clinical services.
+                </p>
+            </div>
+            
+            <div class="testimonials-carousel-wrapper fade-in-element">
+                <div class="testimonials-carousel" id="testimonials-carousel">
+                    <!-- Review 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "AuraCare provided an exceptionally professional environment. Dr. Sophia Martinez was very patient, explaining all details about my cardiovascular diagnosis. Highly recommend this clinic."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Robert K. Lawson</h4>
+                                <p>Cardiology Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "The pediatric team here is amazing. My 5-year-old child felt extremely safe and happy during his checkup. Dr. Emily Chen has a magical touch with children. The facility is very clean."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Olivia Henderson</h4>
+                                <p>Parent of Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "I visited AuraCare for post-accident orthopedic rehabilitation. The physical therapy team and Dr. Marcus Vance were exceptionally dedicated. I am now back to running pain-free!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Jason Miller</h4>
+                                <p>Orthopedics Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Booking an appointment online was extremely smooth. I had a dental extraction done by their dental team, and it was entirely painless. Modern facilities and caring receptionists."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Amanda Fletcher</h4>
+                                <p>Dental Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" id="carousel-prev" aria-label="Previous Review">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots" id="carousel-dots">
+                        <!-- Dots populated by JS -->
+                    </div>
+                    <button class="carousel-btn next-btn" id="carousel-next" aria-label="Next Review">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================= APPOINTMENT & CONTACT SECTION ================================= -->
+    <section class="appointment-section" id="appointment">
+        <div class="container appointment-container">
+            <div class="contact-info-panel fade-in-element" id="contact">
+                <div class="section-tag">Contact Info</div>
+                <h2 class="section-title">Reach Out to Us For Any Assistance</h2>
+                <p class="section-desc">
+                    Have questions about our services, healthcare plans, or pricing? Feel free to contact our administrative team. We are here to support you.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-text">
+                            <h4>Call Us Directly</h4>
+                            <p>+1 (555) 019-2834</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h4>Email Us At</h4>
+                            <p>support@auracareclinic.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <div class="contact-text">
+                            <h4>Clinic Location</h4>
+                            <p>451 Healthcare Pkwy, Suite 100, New York, NY</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="working-hours">
+                    <h3>Working Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday</span> <span>08:00 AM - 08:00 PM</span></li>
+                        <li><span>Saturday</span> <span>09:00 AM - 05:00 PM</span></li>
+                        <li><span>Sunday</span> <span>Emergency Services Only</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="appointment-form-panel fade-in-element">
+                <div class="form-container-glass">
+                    <h3>Schedule An Appointment</h3>
+                    <p>Submit your preferred service and contact details below, and our coordinator will confirm your time slot within 2 hours.</p>
+                    
+                    <form id="appointment-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">Your Full Name <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user"></i>
+                                    <input type="text" id="form-name" placeholder="John Doe" required>
+                                </div>
+                                <span class="error-message" id="name-error">Please enter your full name.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row split-row">
+                            <div class="form-group">
+                                <label for="form-email">Email Address <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                </div>
+                                <span class="error-message" id="email-error">Please enter a valid email address.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-phone">Phone Number <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-phone-flip"></i>
+                                    <input type="tel" id="form-phone" placeholder="+1 (555) 000-0000" required>
+                                </div>
+                                <span class="error-message" id="phone-error">Please enter your phone number.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row split-row">
+                            <div class="form-group">
+                                <label for="form-service">Select Department <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-briefcase-medical"></i>
+                                    <select id="form-service" required>
+                                        <option value="" disabled selected>Choose department</option>
+                                        <option value="cardiology">Cardiology</option>
+                                        <option value="pediatrics">Pediatrics</option>
+                                        <option value="neurology">Neurology</option>
+                                        <option value="orthopedics">Orthopedics</option>
+                                        <option value="dental">Dental Care</option>
+                                        <option value="general">General Medicine</option>
+                                    </select>
+                                </div>
+                                <span class="error-message" id="service-error">Please select a department.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-date">Preferred Date <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    <input type="date" id="form-date" required>
+                                </div>
+                                <span class="error-message" id="date-error">Please select an appointment date.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-message">Describe Your Condition (Optional)</label>
+                                <div class="input-wrapper textarea-wrapper">
+                                    <i class="fa-regular fa-message"></i>
+                                    <textarea id="form-message" rows="3" placeholder="Tell us briefly about your symptoms or medical questions..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full-width">
+                            Submit Appointment Request <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================= FOOTER ================================= -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <a href="#home" class="logo">
+                    <i class="fa-solid fa-house-chimney-medical"></i> Aura<span>Care</span>
+                </a>
+                <p class="brand-desc">
+                    Bringing world-class healthcare with care, compassion, and cutting-edge technology. Your health is our highest priority.
+                </p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Departments</a></li>
+                    <li><a href="#doctors">Specialist Doctors</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Departments</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Cardiology</a></li>
+                    <li><a href="#services">Pediatrics</a></li>
+                    <li><a href="#services">Neurology</a></li>
+                    <li><a href="#services">Orthopedics</a></li>
+                    <li><a href="#services">Dental Care</a></li>
+                    <li><a href="#services">General Medicine</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p class="newsletter-desc">Subscribe to receive healthy living tips, updates, and health bulletins.</p>
+                <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                    <input type="email" placeholder="Your Email Address" required aria-label="Newsletter Email">
+                    <button type="submit" aria-label="Subscribe"><i class="fa-regular fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 AuraCare Medical Clinic. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================= TOAST NOTIFICATION FOR FORM ================================= -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-message">
+                <h4>Appointment Requested!</h4>
+                <p>We will contact you shortly to confirm your schedule.</p>
+            </div>
+        </div>
+        <button class="toast-close" id="toast-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
